@@ -20,11 +20,11 @@ public class Gaulois {
 		String parole = prendreParole();
 	}
 
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le gaulois " + nom + ":";
 	}
 	public void frapper(Romain romain) {
-		System.out.println(nom +  "envoie un grand coup dans la machoire de " + romain.getNom());
+		System.out.println(nom +  " envoie un grand coup dans la machoire de " + romain.getNom());
 		romain.recevoirCoup(force/3);
 		
 	}
@@ -37,7 +37,8 @@ public class Gaulois {
 		Gaulois Asterix = new Gaulois ("Asterix", 8);
 		System.out.println(Asterix);
 		System.out.println(Asterix.prendreParole() + "Je suis asterix le gaulois");
-		System.out.println(Asterix.parler("je suis asterix"));
+		Asterix.parler("je suis asterix");
+		Asterix.frapper(romain);
 		
 		
 	}

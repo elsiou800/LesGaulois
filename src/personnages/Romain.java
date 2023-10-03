@@ -15,10 +15,10 @@ public class Romain {
 	}
 
 	public void parler(String texte) {
-//		System.out.println(prendreParole () + "« " + texte + "»");
+//		System.out.println(prendreParole () + "ï¿½ " + texte + "ï¿½");
 	}
 	
-	private String  prendreParole() {
+	public String  prendreParole() {
 		return "Le Romain "+ nom + " :";
 		
 	}
@@ -26,12 +26,17 @@ public class Romain {
 	public void recevoirCoup(int forceCoup) {
 		force-=forceCoup ;
 		if (force<0) {
-			parler("Aïe");
+			parler("Aï¿½e");
 		} else {
 			parler("J'abandonne...");
 		}
 		
 	}
-	
-		
+	public static void main(String[] args) {
+		Romain romain = new Romain ("romain", 6);
+		System.out.println(romain);
+		System.out.println(romain.prendreParole() + "je suis un Romain");
+		System.out.println(romain.parler("je suis romain"));
+		System.out.println(romain.recevoirCoup(3));
+}
 }
